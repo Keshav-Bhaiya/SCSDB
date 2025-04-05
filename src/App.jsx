@@ -11,7 +11,7 @@ import Moviedetails from "./components/Moviedetails";
 import TvDetails from "./components/TvDetails";
 import PersonDetails from "./components/PersonDetails";
 import Trailer from "./components/partials/Trailer";
-import NotFound from "./components/Notfound";
+import NotFound from "./components/NotFound";
 
 function App(){
   return(
