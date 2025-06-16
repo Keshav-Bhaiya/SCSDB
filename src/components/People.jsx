@@ -58,9 +58,9 @@ const People = ()=>{
           <i onClick={()=>navigate(-1)} className="hover:text-[#6556CD] ri-arrow-left-line"></i>{" "}
           People 
             </h1>
-
             <div className="flex items-center w-[80%]">
             <Topnav/>
+
             
             <div className="w-[2%]"></div>
            

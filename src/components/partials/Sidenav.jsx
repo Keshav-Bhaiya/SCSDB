@@ -31,8 +31,8 @@ const Sidenav= ()=>{
       <h1 className="text-white font-semibold text-xl mt-10 mb-5 ">
         Website Information
         </h1>
-      <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-5"><i className="mr-1 ri-information-2-fill"></i> About </Link>
-      <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-5"><i className="mr-1 ri-phone-fill"></i> Contact Us</Link>
+      <Link to="/about" className="hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-5"><i className="mr-1 ri-information-2-fill"></i> About </Link>
+      <Link to="/contactus" className="hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-5"><i className="mr-1 ri-phone-fill"></i> Contact Us</Link>
 
 
       </nav>

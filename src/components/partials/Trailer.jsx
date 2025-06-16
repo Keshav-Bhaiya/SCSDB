@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 import { useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import NotFound from "../NotFound";
+import NotFound from "../../components/NotFound";
 
 const Trailer = ()=>{
   const navigate = useNavigate();
@@ -27,4 +27,4 @@ const Trailer = ()=>{
     </div>
   )
 }
-export default Trailer
+export default Trailer;
