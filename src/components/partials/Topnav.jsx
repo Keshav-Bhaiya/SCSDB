@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "../../utils/axios";
 import noimage from "/noimage.jpg";
-import { RxHamburgerMenu } from "react-icons/rx";
 
-const Topnav = ({ onHamburgerClick }) => {
+const Topnav = () => {
   const [query, setquery] = useState("");
   const [searches, setsearches] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
@@ -29,25 +28,12 @@ const Topnav = ({ onHamburgerClick }) => {
   }, [query]);
 
   return (
-    <nav className="w-full flex flex-col md:flex-row items-center justify-center px-5 md:px-10 py-2 md:py-2 gap-2 md:gap-0 bg-[#1F1E24] sticky top-0 z-30">
+    <nav className="w-full flex flex-col md:flex-row items-center justify-center px-15 md:px-10 py-2 md:py-2 gap-2 md:gap-0 bg-[#1F1E24] sticky top-0 z-30">
       <div className="flex items-center w-full relative justify-center">
-        {/* Hamburger for mobile ONLY on home page */}
-        {location.pathname === "/" && (
-          <div className="flex items-center gap-2 md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-40">
-            <button
-              className="p-2 bg-transparent rounded text-white focus:outline-none"
-              aria-label="Toggle menu"
-              onClick={onHamburgerClick}
-            >
-              <RxHamburgerMenu size={24} />
-            </button>
-          </div>
-        )}
-
         {/* Search container with proper spacing and positioning */}
         <div className="relative w-full max-w-2xl flex items-center">
           {/* Search icon with proper positioning */}
-          <div className={`absolute ${location.pathname === '/' ? 'left-16' : 'left-4'} md:left-4 top-1/2 -translate-y-1/2 flex items-center pointer-events-none z-10`}>
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center pointer-events-none z-10">
             <i className="text-lg md:text-xl text-zinc-400 ri-search-line" />
           </div>
 
@@ -55,9 +41,7 @@ const Topnav = ({ onHamburgerClick }) => {
           <input
             onChange={(e) => setquery(e.target.value)}
             value={query}
-            className={`text-white outline-none border-none ${
-              location.pathname === '/' ? 'pl-24' : 'pl-12'
-            } md:pl-12 pr-12 py-3 md:py-3 text-base md:text-lg bg-transparent w-full rounded-full text-left placeholder:text-zinc-400 placeholder:font-normal border border-zinc-600 focus:border-zinc-500 transition-colors`}
+            className="text-white outline-none border-none pl-12 pr-12 py-3 md:py-3 text-base md:text-lg bg-transparent w-full rounded-full text-left placeholder:text-zinc-400 placeholder:font-normal border border-zinc-600 focus:border-zinc-500 transition-colors"
             type="text"
             placeholder="search anything"
             style={{ letterSpacing: '0.01em' }}

@@ -9,7 +9,7 @@ const Header = ({data})=>{
           })`,
       backgroundPosition: "center",
       backgroundSize: "cover"
-    }} className="w-full h-[38vh] sm:h-[45vh] md:h-[50vh] flex flex-col items-start justify-end px-0 sm:px-8 md:px-16 py-6 md:py-10 text-left mx-0 sm:mx-auto sm:rounded-xl sm:shadow-lg">
+    }} className="w-full h-[38vh] sm:h-[45vh] md:h-[50vh] flex flex-col items-start justify-end px-5 sm:px-8 md:px-16 py-6 md:py-10 text-left mx-2 sm:mx-auto sm:rounded-xl sm:shadow-lg">
       <h1 className="w-full sm:w-[90%] md:w-[70%] text-2xl sm:text-4xl md:text-5xl font-black text-white break-words mb-2 md:mb-4">
         {data.name || data.title || data.original_name || data.original_title}
       </h1>

@@ -233,7 +233,6 @@ const About = () => {
             Made with <span className="text-red-500 animate-pulse">❤️</span> for movie and TV show enthusiasts everywhere
           </p>
         </div>
-
       </div>
     </div>
   );

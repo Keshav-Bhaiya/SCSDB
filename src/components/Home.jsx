@@ -94,7 +94,7 @@ const Home = () => {
       
       {/* Main content: full width on mobile, 80% on md+ */}
       <div className="w-full md:w-[80%] h-full overflow-auto overflow-x-hidden p-0 m-0">
-        <Topnav onHamburgerClick={() => setSidenavOpen(!sidenavOpen)} />
+        <Topnav />
         <Header data={wallpaper} />
         
         {/* Trending Section */}
@@ -138,7 +138,7 @@ const Home = () => {
         {upcoming && (
           <>
             <div className="p-3 md:p-5 pt-8 md:pt-10">
-              <h1 className="text-2xl md:text-3xl font-semibold text-zinc-400 mb-3">
+              <h1 className="text-2xl md:text-3xl font-semibent text-zinc-400 mb-3">
                 Upcoming Releases
               </h1>
               

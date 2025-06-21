@@ -31,7 +31,7 @@ const Sidenav = ({ open, setOpen }) => {
       {/* Hamburger button for mobile - Fixed positioning and z-index */}
       {showHamburger && (
         <button
-          className="md:hidden fixed top-4 left-4 z-[60] p-2 bg-[#1F1E24] rounded-lg text-white focus:outline-none shadow-lg border border-zinc-600"
+          className="md:hidden fixed top-2 left-3 z-[60] p-2 bg-[#1F1E24] rounded-lg text-white focus:outline-none shadow-lg border border-zinc-600"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -48,7 +48,7 @@ const Sidenav = ({ open, setOpen }) => {
       )}
 
       <aside
-        className={`h-screen border-r-2 border-zinc-300 bg-[#1F1E24] w-[85vw] max-w-[320px] md:w-[19vw] md:max-w-[420px] p-6 md:p-10 flex flex-col fixed z-[50] top-0 left-0 overflow-y-auto transition-all duration-300 ease-in-out ${
+        className={`h-screen border-r-2 border-zinc-300 bg-[#1F1E24] w-[70vw] max-w-[320px] md:w-[19vw] md:max-w-[420px] p-13 md:p-10 flex flex-col fixed z-[50] top-0 left-0 overflow-y-auto transition-all duration-300 ease-in-out ${
           open ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
