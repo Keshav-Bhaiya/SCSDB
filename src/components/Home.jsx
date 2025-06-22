@@ -6,6 +6,7 @@ import Header from "./partials/Header";
 import HorizontalCards from "./partials/HorizontalCards";
 import Dropdown from "./partials/Dropdown";
 import Loading from "./Loading";
+import Footer from "./Footer";
 
 const Home = () => {
   document.title = "SCSDB | Homepage";
@@ -298,11 +299,13 @@ const Home = () => {
         </div>
 
         {/* Footer Section */}
-        <div className="p-3 md:p-5 pt-8 md:pt-10 pb-8 md:pb-12">
+        
+           <Footer />
+           <div className="p-3 md:p-5 pt-8 md:pt-10 pb-8 md:pb-12">
           <div className="border-t border-zinc-700 pt-6">
             <div className="text-center text-zinc-500 text-sm leading-relaxed break-words">
               <p className="mb-2">
-                © 2024 SCSDB - Your Ultimate Entertainment Database
+                © 2025 SCSDB - Your Ultimate Entertainment Database
               </p>
               <p>
                 Discover, explore, and enjoy the best in movies and television. 
@@ -312,6 +315,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+   
     </div>
   );
 };

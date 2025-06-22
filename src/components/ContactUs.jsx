@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Topnav from "./partials/Topnav";
+import Footer from "./Footer";
 
 const ContactUs = () => {
   document.title = "SCSDB | Contact Us";
@@ -266,6 +267,7 @@ const ContactUs = () => {
             This product uses the TMDB API but is not endorsed or certified by TMDB.
           </p>
         </div>
+        <Footer/>
       </div>
     </div>
   );
