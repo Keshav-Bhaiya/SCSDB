@@ -51,8 +51,8 @@ const ContactUs = () => {
   return (
     <div className="w-full h-full">
       {/* Header Section */}
-      <div className="w-full flex items-center justify-between mb-10">
-        <Link></Link>
+      <div className="w-full flex items-center md:px-[5%] px-2 py-3 justify-between mb-10">
+        
         <h1 className="text-2xl font-semibold text-zinc-400">
           <i
             onClick={() => navigate(-1)}

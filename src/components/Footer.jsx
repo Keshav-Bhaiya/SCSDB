@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Footer = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -18,8 +24,15 @@ const Footer = () => {
           </button>
         </div>
 
+        {/* Hamburger Menu Button (Mobile Only) */}
+        <button className="hamburger-menu" onClick={toggleMenu}>
+          <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
+        </button>
+
         {/* Footer Links Section */}
-        <div className="footer-links">
+        <div className={`footer-links ${isMenuOpen ? 'mobile-open' : ''}`}>
           {/* The Basics Column */}
           <div className="footer-column">
             <h3 className="footer-heading">THE BASICS</h3>
@@ -65,9 +78,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Bottom */}
-     
-
       <style jsx>{`
         .footer {
           background-color: #1F1E24;
@@ -83,6 +93,7 @@ const Footer = () => {
           display: flex;
           gap: 80px;
           align-items: flex-start;
+          position: relative;
         }
 
         .footer-brand {
@@ -127,6 +138,40 @@ const Footer = () => {
           background-color: #6556CD;
           color: white;
           transform: translateY(-2px);
+        }
+
+        .hamburger-menu {
+          display: none;
+          flex-direction: column;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 10px;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 10;
+        }
+
+        .hamburger-line {
+          width: 25px;
+          height: 3px;
+          background-color: #6556CD;
+          margin: 3px 0;
+          transition: 0.3s;
+          transform-origin: center;
+        }
+
+        .hamburger-line.active:nth-child(1) {
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger-line.active:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger-line.active:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
         }
 
         .footer-links {
@@ -184,26 +229,50 @@ const Footer = () => {
           font-size: 14px;
         }
 
-        /* Responsive Design */
+        /* Mobile Responsive Design */
         @media (max-width: 768px) {
           .footer-container {
             flex-direction: column;
-            gap: 40px;
-            text-align: center;
+            gap: 20px;
+            align-items: flex-start;
           }
 
           .footer-brand {
-            align-items: center;
+            align-items: flex-start;
+            width: 100%;
+            gap: 20px;
+          }
+
+          .hamburger-menu {
+            display: flex;
           }
 
           .footer-links {
             flex-direction: column;
-            gap: 30px;
+            gap: 20px;
             width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+          }
+
+          .footer-links.mobile-open {
+            max-height: 1000px;
           }
 
           .footer-column {
-            align-items: center;
+            align-items: flex-start;
+            width: 100%;
+          }
+
+          .footer-heading {
+            font-size: 16px;
+            text-align: left;
+          }
+
+          .footer-list {
+            align-items: flex-start;
+            text-align: left;
           }
 
           .logo-text {
@@ -221,12 +290,17 @@ const Footer = () => {
           }
 
           .footer-links {
-            gap: 25px;
+            gap: 15px;
           }
 
           .join-button {
             padding: 10px 20px;
             font-size: 12px;
+          }
+
+          .hamburger-menu {
+            top: 15px;
+            right: 15px;
           }
         }
       `}</style>

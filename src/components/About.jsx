@@ -38,7 +38,7 @@ const About = () => {
     <div className="w-full min-h-screen bg-[#1F1E24]">
       
       {/* Header Section */}
-      <div className="w-full flex items-center justify-between px-2 md:px-[5%] py-4 bg-[#1F1E24] border-b border-zinc-800/50">
+      <div className="w-full flex items-center justify-between px-3 md:px-[5%] py-4 bg-[#1F1E24] border-b border-zinc-800/50">
         {/* <Link></Link> Uncomment when using with React Router */}
         <h1 className="text-2xl font-semibold text-zinc-400">
           <i 
